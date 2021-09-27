@@ -1,0 +1,17 @@
+tps activity 1:
+1. The starting address of Text Segment is 0x00400000 and the starting address of Data segment is 0x10010000
+2. Basic assembly code is a lot more lower leveled and uses more hex in the code itself
+3. 32 bits
+4. 8 columns
+5. 4 bytes
+6. m: .word 20
+7. 0x10010008
+8. 4
+9. 0x10010008 0x1001000c 0x10010010
+10. Yes because each ascii code is stored in 4 bytes blocks with null pointers
+11. la $a0, str1 -> li $v0, 4 -> syscall
+12. La would load address of n in register t3
+
+tps activity 2:
+1. It is redundant, it will just branch to one part of your code if the inequality is true otherwise you the code will continue in the same block.
+2.  

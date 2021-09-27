@@ -1,0 +1,18 @@
+while scannedNum != 0:
+	print "Please enter an integer"
+	scanf -> scannedNum 
+	if scannedNum > 0
+		posavgSum += scannedNum
+		posNumCounter++
+	else if scannedNum < 0 
+		negavgSum += scannedNum
+		negNumCounter++
+	else 
+		if(negavgSum != 0)
+			nAvg = negavgSum/negNumCounter;
+			print "Negative Average: " + nAvg
+		else if(posavgSum != 0)
+			pAvg = posavgSum/posNumCounter;
+			print "Positive Average: " + pAvg
+		else 
+			return 0;

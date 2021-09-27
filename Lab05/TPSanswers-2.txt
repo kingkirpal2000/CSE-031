@@ -1,0 +1,19 @@
+TPS 1: 
+1. MARS stands for MIPS Assembler and Runtime Simulator
+4. 
+	a. File -> Open -> navigate to the project
+	b. Click Run -> Assemble
+	c. To run click the green play button 
+	d. No
+	e. Click the green play button with a "1" on it
+	f. You have to click the double arrows backwards in order to reset the registers and then repeat step c.
+
+TPS 2:
+1. .data is to declare the data which would store it in memory, .word is used to store n 32-bit quantities in successive memory words, .text indicates that following items are stored in the user text segment, typically instructions
+2. checks if t3 is equal 0 and if so jumps to finish
+3. branch
+4. After you assemble the program in the execute window you can set a breakpoint by checking the box on the line you want.
+5. Step using the green play button with 1 on it
+6. Just look at the right hand content pane that says register and click on a value to change it
+7. N is stored at the address 0x10010000
+8. The syscall function is used to execute the command stored at $v0, you can use the table online to find out which syscall does what. For example $v0 = 1 prints out the number at $a0 while syscall 10 finishes the program. 

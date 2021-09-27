@@ -1,0 +1,90 @@
+Line #7:
+
+To machine code:
+
+addi $s0, $zero, -15 -> I format
+Opcode=0x08, rs = 0x00, rt =0x10,  imm = 0xFFF1
+Binary = 0010 0000 0001 0000 1111 1111 1111 0001
+Hex = 2010FFF1
+
+To MIPS:
+Machine Code = 0x2010FFF1
+Binary = 0010 0000 0001 0000 1111 1111 1111 0001
+Because first 6 bits is 001000 which equal 8 in hex we look for an instruction with opcode 8 in reference sheet
+addi -> I format  = opcode rs rt immediate
+Opcode = 001000
+rs = 00000
+rt = 10000
+immediate = 1111111111110001
+
+0x08	0x0	0x10	0xFFF1
+maps to : addi $16, $0, -15
+
+-------------------------------------------------------
+
+Line 14:
+To machine code: 
+
+slt $t0, $s0, $s1 -> R format
+Opcode = 0x00 rs = 0x10, rt = 0x11, rd = 0x08, shamt = 0x00, funct = 0x2a
+Binary = 0000 0010 0001 0001 0100 0000 0010 1010
+Hex = 	0211402a
+
+To MIPS:
+Machine Code = 0x0211402a
+Binary = 0000 0010 0001 0001 0100 0000 0010 1010
+First six bits is 0 and last six bits is 48 which is 2a in hex so we look for 0/2a in reference
+slt -> R format = opcode, rs, rt, rd, shamt, funct
+opcode = 000000
+rs = 10000
+rt = 10001
+rd = 01000
+shamt = 00000
+funct = 101010
+
+0x00	0x10	0x11	0x00	0x2a
+maps to: slt $t0, $s0, $s1
+
+----------------------------------------
+
+Line 17:
+
+To machine code:
+
+beq $t0, $zero, LEEQ -> I format
+Opcode = 0x04, rs = 0x08, rt = 0x00, immediate = 0x00000006
+Binary = 0001 0001 0000 0000 0000 0000 0000 0000 0000 0000 0000 0110
+Hex = 0x110000000006
+
+To MIPS:
+Machine Code = 0x110000000006
+Binary = 0001 0001 0000 0000 0000 0000 0000 0000 0000 0000 0000 0110
+First 6 bits are 000100 which is 8 in hex. Looking for opcode 8 on reference sheet gives beq
+beq -> I format = opcode, rs, rt, immediate
+opcode = 00 0100
+rs = 0 1000
+rt = 0 0000
+immediate = 0000 0000 0000 0110
+
+0x04	0x08	0x00	0x0006
+maps to: beq $8, $0, pc+5 -> beq $t0, $zero, LEEQ
+
+-----------------------------
+Line 20:
+To machine code:
+
+j GRT
+Opcode = 0x02, PC = 0x0040001c PC Binary = 0000 0000 0100 0000 0000 0000 0001 1100
+0000 0100 0000 0000 0000 0001 11
+Binary = 0000 1000 0001 0000 0000 0000 0000 0111
+Hex = 0x08100007 
+
+To Mip:
+Machine Code = 0x08100007 
+Binary = 0000 1000 0001 0000 0000 0000 0000 0111
+Opcode = 2 -> J
+j -> j format = opcode, address
+opcode = 00 0010
+address = 00 0001 0000 0000 0000 0000 0111
+load bits = 0000 0000 0100 0000 0000 0000 0001 1100
+maps to j 0x0040001c

@@ -1,0 +1,32 @@
+Sabir Kirpal
+
+
+TPS 1
+1. Shawn Duong & Brandon Ortega
+2. 	- ubuntu.com/tutorials/command-line-for-beginners#1-overview
+	- howtogeek.com/412055/37-important-linux-commands-you-should-know/
+	- ss64.com/bash/
+3. 	- https://github.com/shawnduong/zero-to-hero-hacking/blob/master/linux/command-line-basics.md
+	- https://github.com/shawnduong/zero-to-hero-hacking/blob/master/linux/commands-to-know.md (Shawns Links). 
+	- https://www.youtube.com/watch?v=YHFzr-akOas
+	- https://www.youtube.com/watch?v=W4gE8k2RE_s. 
+	- https://www.guru99.com/linux-commands-cheat-sheet.html
+4. Yeah
+
+TPS 2
+1. On mac find your terminal which is in your launch pad. (You can press command and space, search for terminal) Yes you can open more than one terminal, by pressing Command+T(Tab) or Command+N(New Window). You might want to open more than one terminal if you are working on two different projects or two different projects.
+2. ls
+3. Assuming you are in root directory you can use "cd Desktop/"
+4. mkdir CSE31
+
+TPS 3
+1. www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html, https://medium.com/@laura.derohan/compiling-c-files-with-gcc-step-by-step-8e78318052
+2. Brandon: https://www.geeksforgeeks.org/gcc-command-in-linux-with-examples/, https://rupinderjeetkaur.wordpress.com/2014/06/20/run-a-cc-program-on-terminal-using-gcc-compiler/
+   Shawn: https://linux.die.net/man/1/gcc, https://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc.pdf
+3. gcc main.c
+4. If you recieve an output without errors
+5. -c compiles the program but doesn't link the file. The output is just an object file for each source file
+6. -g Produces debugging information in the operating system's native format
+7. gcc main.c -o cselab1 || mv main cselab1
+8. creates and elf (binary format) will be called a.out
+9. ./a.out

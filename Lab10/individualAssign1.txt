@@ -1,0 +1,5 @@
+1. My CPU has 4 caches L1D Cache(data), L1I Cache(instructions), L2 Cache, and L3 Cache
+2. L1D = 32 KBytes, L1I = 32 KBytes, L2 = 256 KBytes, L3 = 16 MBytes
+3. 64 byte Line sizes for all 4 caches
+4. L1D = 8 way set associative L1I = 8 way set associative L2 = 4 way set associative L3 = 16 way set associative
+5. tag = 20bits index = 6bits, offset = 6bits

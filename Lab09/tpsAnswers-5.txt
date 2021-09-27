@@ -1,0 +1,41 @@
+TPS 1:
+
+1. ok
+2. ok
+3. ok
+4. 32 bits
+5. There are 3 types, (I format, J format, and R format). I format is instructions like "lw" and "sw". J format is for 
+	instructions like "j" and "jal". R format is for arithmetic operations like "mul" and "add"
+6. 
+	a. This is "I format". This has 4 fields. The names are in order: opcode, rs, rt, immediate.
+	b. Opcode = Ox8 rs = $zero, rs = 0x00000000, rt = $s0, rt = 0x10, immediate = 0x19
+	c. 
+		i) Instruction: 8	0	16	25
+		ii) Binary: 0010 0000 0001 0000 0000 0000 0001 1001
+		iii) Hex: 20100019
+7. 
+	a. Hex: 0x0230402a Binary: 0000 0010 0011 0000 0100 0000 0010 1010
+	b. R format. You can tell by first looking at the first 6 bits and because you have multiple 
+		instructions with 0 for the opcode, you can look at the last 6 bits. The last 6 bits in hex is 2a. 
+		Therefore on the reference sheet we can look for 0/2a_hex. There are 6 fields in this format. 
+		Opcode, rs, rt, rd, shamt, funct
+	c. opcode = 0x00, rs = 0x11, rt = 0x10, rd = 0x08, shamt = 0x00, funct = 0x2a
+	d. This instruction is SLT and I can tell by looking at the opcode 0 and funct 2a. rd = $t0, rs = $s1, rt = $s0
+	e. The final mips instruction is the same slt $t0, $s1, $s0
+8. 
+	a. This is I format
+	b. opcode = 0x05, rs = 0x08, rt = 0x00, immediate = 0x01
+	c. LESS, 0x00400001c
+	d. no we do not branch uses the PC to jump to a signified label
+	e. we just count the number of instructions to the label
+	f. 0x15000001
+9. 
+	a. This is j format and they have 2 fields
+	b. 0x02
+	c. label GREQ and adress 0x00400030
+	d. 26 bits and you squeeze the address by ignoring the lower 2 bits and the upper 4 bits. 
+		The lower 2 bits are always 00 and the upper 4 bits are from the PC
+		binary address = 0000 0000 0100 0000 0000 0000 0011 0000
+00 0001 0000 0000 0000 0000 1100
+010000c
+	e. binary = 0000 1000 0001 0000 0000 0000 0001 1100 hex = 0x0810000c

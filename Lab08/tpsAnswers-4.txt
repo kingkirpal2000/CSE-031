@@ -1,0 +1,24 @@
+TPS 1:
+1. ok
+2. ok
+3. ok
+4. ok
+5. We no longer need an N declared in the .data segment because that would be like having a global variable declared for a user input. It doesnt make any sense to have it. La and lw are just functions to set N into a register. Now that we dont have an N we don't need to set it anywhere. 
+6. Runs correctly
+
+TPS 2:
+1. The answer is 29
+2. So far here we just create enough space to store one word and then jump and link to recursion until it is finshed and then we jump to end to finish the program
+3. ok 
+4. Stored it in $a0
+5. we expect to be in $v0 and we can store that in the stack easily
+6. ok
+7. 3 integers. First thing stored is the return address
+8. ok
+9. ok
+10. Because it might get changed when we recursively call recursion
+11. ok
+12. The return value will be lost or overwritten. 
+13. ok
+14. ok
+15. $ra - the return value needs to be retrieved from the stack pointer. 

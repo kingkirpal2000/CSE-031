@@ -1,0 +1,17 @@
+TPS 1:
+1. The program prints the value that is stored in the first index of the four_ints array.
+2. I expect the program to print a 2 out in hexadecimal version this time.
+3. The answer was different I don't know why yet 44434241
+4. four_ints[1] printed out a number 2??? Im lost
+5. a. In this program there were 2 arrays allocated.
+   b. Yes they are pointing to the same address
+6. The address are spaced apart by 4 bytes at every index.
+7. img.png
+8. In this loop I discovered that chars are maybe one byte each. Because we tried to cast the four_ints into chars, it stored them all in the one byte box 4 times.
+9. img.png
+10. C moves bytes according to whatever data structure the array that is being accessed is being used.
+
+TPS 2:
+1. Line 8 just declares an array of "n" which is =5 arrays in arr. Essentially it created n int arrays in arr
+2. *(arr+i)
+4. We pass in size of the array because in C we don't have any built in functions to tell us what the length of the array is outside of its declared scope.  

@@ -1,0 +1,22 @@
+TPS 1:
+
+1. A functin returns a value but a procedure does not. A method is like a function but it belongs to a specific class.
+2. ok
+3. made proc1.c
+4. 20 and it adds two values and puts it in $v0
+5. no because of register conventions you would keep jumping back to the same part
+6. 11
+7. It doesn't work ie crashes 
+8. 0x00400020
+9. The return address just changed
+10. 0x00400018
+11. jal
+12. added jal instead of jump
+
+TPS 2:
+1. 38
+2. ok
+3. because sum jumps back to the $ra due to jal register we should use a stack pointer
+4. return address is overwritten. use a stack pointer and store it there 
+5. This is a problem because we are overwriting the $s0 register we can fix this by decrementing stack pointer by 3 bytes.
+6. 
